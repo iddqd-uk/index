@@ -9,6 +9,6 @@ Without JS. Without the need for building and other crap.
 
 Any changes, pushed into the `main` branch will be automatically deployed _(be careful with this, think **twice** before pushing)_.
 
-[badge_publish]:https://img.shields.io/github/workflow/status/iddqd-uk/index/publish/master?label=publish&maxAge=60&logo=github
-[badge_last_commit]:https://img.shields.io/github/last-commit/iddqd-uk/index/master?label=last%20update&maxAge=60
+[badge_publish]:https://img.shields.io/github/workflow/status/iddqd-uk/index/publish/main?label=publish&maxAge=60&logo=github
+[badge_last_commit]:https://img.shields.io/github/last-commit/iddqd-uk/index/main?label=last%20update&maxAge=60
 [link_actions]:https://github.com/iddqd-uk/index/actions
