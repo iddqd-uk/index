@@ -1,0 +1,23 @@
+name: publish
+
+on:
+  push:
+    branches: [master, main]
+    tags-ignore: ['**']
+
+env:
+  CNAME: iddqd.uk
+
+jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-actions>
+  build:
+    name: Publish the site
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: ${{ env.CNAME }}

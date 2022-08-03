@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/webmanifest.json">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#211f23">
+
+  <meta name="robots" content="nofollow">
+  <meta name="description" content="iddqd.uk | as-is">
+  <title>iddqd.uk | as-is</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: 0 0
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 250, .25);
+      border-radius: 3px;
+    }
+
+    ::selection {
+      background: rgba(255, 255, 250, .14);
+    }
+
+    html, body {
+      background-color: #282b2f;
+      color: #ffffe6;
+    }
+
+    body {
+      overflow: auto;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-image: radial-gradient(circle, #282b2f, #282b2f, #18191d);
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .services-plate {
+      max-width: 700px;
+      margin: 0 30px 0 30px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .service-item {
+      font-family: Roboto, sans-serif;
+      background-color: #373b3e;
+      margin: 2px;
+      border-radius: 3px;
+      list-style: none;
+    }
+
+    .service-item >, .service-item {
+      color: #ffffe6;
+      text-decoration: none;
+      cursor: default;
+    }
+
+    .service-item.clickable >, .service-item.clickable {
+      cursor: pointer;
+    }
+
+    .service-item.clickable :hover .name {
+      text-decoration: underline;
+    }
+
+    .service-item .inner {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .service-item .icon {
+      width: 4em;
+      padding-right: .2em;
+      display: inline-block;
+      float: left;
+    }
+
+    .service-item .caption {
+      color: #fff;
+      float: right;
+      height: 100%;
+      max-width: 200px;
+    }
+
+    .service-item .caption > {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .service-item .caption .name {
+      display: block;
+      font-size: 1.8em;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .service-item .caption .description {
+      display: block;
+      font-size: .8em;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="app">
+    <ul class="services-plate">
+      <!-- Icons located here: <https://tabler-icons.io/> -->
+      <!--li>
+        <div class="service-item clickable" style="background-color: #91103e">
+          <a href="https://proxy.hook.sh/" target="_blank" rel="noreferrer" class="inner">
+            <img src="assets/icons/spy.svg" alt="blog" class="icon">
+            <span class="caption">
+              <span class="name">Proxy</span>
+              <span class="description">Freedom internet! Use it for free</span>
+            </span>
+          </a>
+        </div>
+      </li-->
+      <li>
+        <div class="service-item clickable" style="background-color: rgb(95, 145, 17);">
+          <a href="https://blog.hook.sh/" target="_blank" rel="noreferrer" class="inner">
+            <img src="assets/icons/book-2.svg" alt="blog" class="icon">
+            <span class="caption">
+              <span class="name">Blog</span>
+              <span class="description">Little blog with a lot of shit (any kinds)</span>
+            </span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
