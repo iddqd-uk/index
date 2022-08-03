@@ -4,9 +4,7 @@ on:
   push:
     branches: [master, main]
     tags-ignore: ['**']
-
-env:
-  CNAME: iddqd.uk
+    paths-ignore: ['**.md']
 
 concurrency:
   group: ${{ github.ref }}
@@ -35,4 +33,4 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: ${{ env.CNAME }}
+          cname: iddqd.uk
