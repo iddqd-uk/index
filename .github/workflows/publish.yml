@@ -28,11 +28,17 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
     steps:
       - uses: gacts/fetch-doppler-secret@v1
         id: cloudflare-account-id
-        with: {token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}, project: cloudflare, secret-name: ACCOUNT_ID}
+        with:
+          token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}
+          project: cloudflare
+          secret-name: ACCOUNT_ID
 
       - uses: gacts/fetch-doppler-secret@v1
         id: pages-deploy-token
-        with: {token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}, project: cloudflare, secret-name: PAGES_DEPLOY_TOKEN}
+        with:
+          token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}
+          project: cloudflare
+          secret-name: PAGES_DEPLOY_TOKEN
 
       - uses: actions/checkout@v3
 
