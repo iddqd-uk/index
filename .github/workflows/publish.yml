@@ -26,11 +26,21 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
     needs: [gitleaks]
     runs-on: ubuntu-20.04
     steps:
+      - uses: gacts/fetch-doppler-secret@v1
+        id: cloudflare-account-id
+        with: {token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}, project: cloudflare, secret-name: ACCOUNT_ID}
+
+      - uses: gacts/fetch-doppler-secret@v1
+        id: pages-deploy-token
+        with: {token: ${{ secrets.DOPPLER_CLOUDFLARE_PROJECT_TOKEN }}, project: cloudflare, secret-name: PAGES_DEPLOY_TOKEN}
+
       - uses: actions/checkout@v3
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: iddqd.uk
+          apiToken: ${{ steps.pages-deploy-token.outputs.secret }}
+          accountId: ${{ steps.cloudflare-account-id.outputs.secret }}
+          projectName: index
+          directory: ./public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
