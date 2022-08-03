@@ -19,9 +19,9 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         with: {fetch-depth: 0}
 
       - name: Check for GitLeaks
-        uses: gacts/gitleaks@v1 # Action page: <https://github.com/gacts/gitleaks>
+        uses: gacts/gitleaks@v1
 
-  build:
+  publish:
     name: Publish the site
     needs: [gitleaks]
     runs-on: ubuntu-20.04
@@ -42,8 +42,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
 
       - uses: actions/checkout@v3
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+      - uses: cloudflare/pages-action@1
         with:
           apiToken: ${{ steps.pages-deploy-token.outputs.secret }}
           accountId: ${{ steps.cloudflare-account-id.outputs.secret }}
