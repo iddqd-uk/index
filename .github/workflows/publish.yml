@@ -47,6 +47,6 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         with:
           apiToken: ${{ steps.pages-deploy-token.outputs.secret }}
           accountId: ${{ steps.cloudflare-account-id.outputs.secret }}
-          projectName: index
+          projectName: iddqd-uk-index
           directory: ./public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
