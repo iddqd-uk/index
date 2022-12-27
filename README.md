@@ -11,6 +11,6 @@ Any changes, pushed into the `main` branch ([`public`](public) directory) will b
 
 > Content hosted on [CloudFlare Pages](https://pages.cloudflare.com/).
 
-[badge_publish]:https://img.shields.io/github/workflow/status/iddqd-uk/index/publish/main?label=publish&maxAge=60&logo=github
+[badge_publish]:https://img.shields.io/github/actions/workflow/status/iddqd-uk/index/publish.yml?branch=main&label=publish&maxAge=60&logo=github
 [badge_last_commit]:https://img.shields.io/github/last-commit/iddqd-uk/index/main?label=last%20update&maxAge=60
 [link_actions]:https://github.com/iddqd-uk/index/actions
