@@ -15,7 +15,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
     name: Gitleaks
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with: {fetch-depth: 0}
 
       - name: Check for GitLeaks
@@ -40,7 +40,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
           project: cloudflare
           secret-name: PAGES_DEPLOY_TOKEN
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: cloudflare/pages-action@1
         with:
