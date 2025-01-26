@@ -9,5 +9,5 @@
 
 Without JavaScript. No need for complex build processes or unnecessary steps.
 
-> [!INFO]
+> [!NOTE]
 > Content is hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
