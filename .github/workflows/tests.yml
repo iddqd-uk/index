@@ -20,6 +20,8 @@ jobs:
   git-leaks:
     name: Check for GitLeaks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - {uses: actions/checkout@v4, with: {fetch-depth: 0}}
       - uses: gacts/gitleaks@v1
