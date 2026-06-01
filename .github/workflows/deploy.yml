@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: cloudflare/wrangler-action@v3
+      - uses: cloudflare/wrangler-action@v4
         env: {PROJECT_NAME: iddqd-uk-index, DIST_DIR: ./public, CF_BRANCH_NAME: main}
         with:
           apiToken: ${{ secrets.CF_PAGES_DEPLOY_TOKEN }}
